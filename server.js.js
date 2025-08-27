@@ -63,10 +63,10 @@ const authenticateToken = (req, res, next) => {
     });
 };
 
-// ** NEW: Route to serve the frontend HTML file **
+// ** Route to serve the frontend HTML file **
 // This tells the server to send the 'index.html' file when someone visits the main URL ('/').
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.resolve(__dirname, 'index.html'));
 });
 
 // User login endpoint
